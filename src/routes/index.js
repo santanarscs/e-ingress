@@ -1,10 +1,13 @@
 import React from 'react';
 import { Switch, Route } from 'react-router-dom';
-import Dashboard from '../pages/dashboard';
+
+import Main from '../pages/Main';
+import ListEvents from '../pages/Events/ListEvents';
 
 const Routes = () => (
   <Switch>
-    <Route exact path="/" component={Dashboard} />
+    <Route path="/events" component={ListEvents} />
+    <Route path="/" exact component={Main} />
   </Switch>
 );
 
