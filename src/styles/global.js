@@ -17,6 +17,9 @@ export const GlobalStyle = createGlobalStyle`
      font-family: 'Roboto', sans-serif;
      color: #2C3842;
    }
+   input, button {
+    font-family: 'Roboto', sans-serif;
+   }
    button {
      cursor: pointer;
    }
