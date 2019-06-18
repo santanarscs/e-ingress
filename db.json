@@ -1,0 +1,7 @@
+{
+	"events": [
+		{ "id": 1, "name": "Evento 001", "description": "Descrição Evento 001" },
+		{ "id": 2, "name": "Evento 002", "description": "Descrição Evento 002" },
+		{ "id": 3, "name": "Evento 003", "description": "Descrição Evento 003" }
+	]
+}
