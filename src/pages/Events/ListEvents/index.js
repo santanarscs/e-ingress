@@ -65,6 +65,7 @@ class ListEvents extends Component {
         </tbody>
       </EventsList>
     </Card>
+    <Link to="/events/new">Novo</Link>
   </Container>
 	  );
 	}

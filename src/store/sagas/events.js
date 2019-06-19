@@ -19,3 +19,10 @@ export function* getEvent(action) {
     console.log(e);
   }
 }
+export function* createEvent(action) {
+  try {
+    const response = yield call(api.post, '/events', action.data);
+  } catch (e) {
+    console.log(e);
+  }
+}

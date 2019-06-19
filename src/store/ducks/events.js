@@ -3,7 +3,8 @@ export const Types = {
   LOAD_ALL_SUCCESS: 'events/LOAD_ALL_SUCCESS',
   LOAD_ONE_REQUEST: 'events/LOAD_ONE_REQUEST',
   LOAD_ONE_SUCCESS: 'events/LOAD_ONE_SUCCESS',
-  LOAD_ONE: 'events/LOAD_ONE',
+  CREATE_REQUEST: 'events/CREATE_REQUEST',
+  CREATE_SUCCESS: 'events/CREATE_SUCCESS',
 };
 
 const INITIAL_STATE = {
@@ -22,8 +23,10 @@ export default function events(state = INITIAL_STATE, action) {
     return { ...state, loading: true };
   case Types.LOAD_ONE_SUCCESS:
     return { ...state, loading: false, currentEvent: action.payload.data };
-  case Types.LOAD_ONE:
-    return { ...state, currentEvent: state.data.filter(event => event.id === action.payload.eventId) };
+  case Types.CREATE_REQUEST:
+    return { ...state, loading: true };
+  case Types.CREATE_SUCCESS:
+    return { ...state, loading: false, currentEvent: action.payload.data };
   default:
     return state;
   }
@@ -40,8 +43,12 @@ export const Creators = {
     type: Types.LOAD_ONE_SUCCESS,
     payload: { data },
   }),
-  getCurrentEvent: id => ({
-    type: Types.LOAD_ONE,
-    payload: { id },
+  createEventRequest: data => ({
+    type: Types.CREATE_REQUEST,
+    payload: { data },
+  }),
+  createEventSuccess: data => ({
+    type: Types.CREATE_SUCCESS,
+    payload: { data },
   }),
 };
