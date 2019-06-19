@@ -38,9 +38,11 @@ class ListEvents extends Component {
     <Card>
       <EventsList>
         <thead>
-          <th>Nome</th>
-          <th>Descrição</th>
-          <th />
+          <tr>
+            <th>Nome</th>
+            <th>Descrição</th>
+            <th />
+          </tr>
         </thead>
         <tbody>
           {!events.data ? (

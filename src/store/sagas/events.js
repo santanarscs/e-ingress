@@ -11,3 +11,11 @@ export function* getEvents() {
     console.log(e);
   }
 }
+export function* getEvent(action) {
+  try {
+    const response = yield call(api.get, `/events/${action.payload.id}`);
+    yield put(EventsActions.getOneEventSuccess(response.data));
+  } catch (e) {
+    console.log(e);
+  }
+}

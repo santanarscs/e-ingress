@@ -16,7 +16,6 @@ export const Card = styled.div`
 	background: #fff;
 	display: flex;
 	flex-direction: column;
-	align-items: center;
 	box-shadow: 0 0 1px 0 rgba(44, 56, 66, 0.08), 0 4px 14px rgba(44, 56, 66, 0.06);
 `;
 
