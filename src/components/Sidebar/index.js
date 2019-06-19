@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import {
   Container, Header, Logo, Nav,
 } from './styles';
@@ -16,22 +16,32 @@ const Sidebar = () => (
     <section>
       <Nav>
         <li>
-          <Link to="/">
+          <NavLink
+            to="/"
+            activeStyle={{
+					    background: 'rgba(0, 0, 0, 0.2)',
+					  }}
+          >
             <img src={Home} alt="Home" />
 						Home
-          </Link>
+          </NavLink>
         </li>
         <li>
-          <Link to="/events">
+          <NavLink
+            to="/events"
+            activeStyle={{
+					    background: 'rgba(0, 0, 0, 0.2)',
+					  }}
+          >
             <img src={Bell} alt="Eventos" />
 						Eventos
-          </Link>
+          </NavLink>
         </li>
         <li>
-          <Link to="/">
+          <NavLink to="/">
             <img src={Plus} alt="Indicações" />
 						Indicações
-          </Link>
+          </NavLink>
         </li>
       </Nav>
     </section>
