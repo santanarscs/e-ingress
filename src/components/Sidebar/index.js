@@ -1,10 +1,12 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import {
   Container, Header, Logo, Nav,
 } from './styles';
 import University from '../../assets/images/university-solid.svg';
 import Home from '../../assets/images/home-solid.svg';
 import Plus from '../../assets/images/plus-solid.svg';
+import Bell from '../../assets/images/bell-solid.svg';
 
 const Sidebar = () => (
   <Container>
@@ -14,16 +16,22 @@ const Sidebar = () => (
     <section>
       <Nav>
         <li>
-          <a href="/">
+          <Link to="/">
             <img src={Home} alt="Home" />
 						Home
-          </a>
+          </Link>
         </li>
         <li>
-          <a href="/">
+          <Link to="/events">
+            <img src={Bell} alt="Eventos" />
+						Eventos
+          </Link>
+        </li>
+        <li>
+          <Link to="/">
             <img src={Plus} alt="Indicações" />
 						Indicações
-          </a>
+          </Link>
         </li>
       </Nav>
     </section>

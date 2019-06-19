@@ -34,7 +34,10 @@ class ListEvents extends Component {
     <EventList>
       {events.data.map(event => (
         <EventItem key={event.id}>
-          <div />
+          <img
+            src={`https://ui-avatars.com/api/?rounded=true&size=80&font-size=0.43&background=CCC&color=FFF&name=${event.name}`}
+            alt="name-event"
+          />
           <strong>{event.name}</strong>
           <span>{event.description}</span>
           <Link to="/">Detalhes</Link>
